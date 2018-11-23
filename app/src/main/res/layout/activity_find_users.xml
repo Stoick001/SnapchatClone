@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FindUsersActivity"
+    android:orientation="vertical"
+    android:background="#000">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="?android:attr/homeAsUpIndicator"
+            android:background="#00FFFFFF"
+            android:tint="#ddd"
+            android:id="@+id/findUsersBack"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00FFFFFF"
+            android:src="?android:attr/actionModeWebSearchDrawable"
+            android:tint="#ddd"
+            android:id="@+id/findUsersSearch"/>
+
+        <EditText
+            android:id="@+id/editTextFindUsers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Search users...."
+            android:inputType="textPersonName"
+            android:textColor="#ddd"
+            android:textColorHint="#ddd"/>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00FFFFFF"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:tint="#ddd"
+            android:foregroundTint="#ddd"
+            android:backgroundTint="#ddd"
+            android:tintMode="multiply"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewFindUsers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:background="@drawable/item_round"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+</LinearLayout>
